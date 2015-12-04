@@ -1,0 +1,9 @@
+Package: com.lizynz.mute
+Name: Mute
+Depends: mobilesubstrate
+Version: 0.0.1
+Architecture: iphoneos-arm
+Description: Mute status bar icon
+Maintainer: Lizynz
+Author: Lizynz
+Section: Tweaks
