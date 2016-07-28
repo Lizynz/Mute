@@ -1,5 +1,3 @@
-Cydia tweak
+Jailbreak tweak: Mute status bar icon
 
-Mute status bar icon
-
-Support iOS 8.0 - iOS 9.0.2
+Support iOS 8.0 - iOS 9.3.3
