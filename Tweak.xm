@@ -1,7 +1,15 @@
 #import <UIKit/UIKit.h>
 #import "LSStatusBarItem.h"
 
-LSStatusBarItem* sbItem = nil;
+LSStatusBarItem* sbItem;
+
+@interface SBMediaController
++ (id)sharedInstance;
+- (BOOL)isRingerMuted;
+- (void)setRingerMuted:(BOOL)muted;
+@end
+
+static BOOL mut;
 
 %hook SBMediaController
 
@@ -12,6 +20,13 @@ LSStatusBarItem* sbItem = nil;
     } else {
        sbItem.visible = NO;
     }
+}
+
+%new
+-(void)muteRinger {
+mut = [[%c(SBMediaController) sharedInstance] isRingerMuted];
+[[%c(SBMediaController) sharedInstance] setRingerMuted:!mut];
+mut = YES;
 }
 
 %end
