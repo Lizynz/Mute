@@ -9,3 +9,6 @@ Mute_FILES = Tweak.xm
 Mute_FRAMEWORKS = UIKit
 
 include $(THEOS_MAKE_PATH)/tweak.mk
+
+before-stage::
+	find . -name ".DS_Store" -delete
